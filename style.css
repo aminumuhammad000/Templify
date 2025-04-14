@@ -1,0 +1,285 @@
+:root{
+    --background-color: #ececec;
+    --primary-color: #2784ca;
+    --secondary-color: #082242;
+    --accent-color: #ffc027;
+    --text-color: #082242;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background-color);
+}
+a{
+    text-decoration: none;
+}
+header{
+    padding: 10px 3em;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    position: fixed;
+    width: 99vw;
+    z-index: 100;
+}
+header .main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .main-container .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header .main-container .logo img{
+    width: 3em;
+    object-fit: cover;
+}
+header .main-container .logo span{
+    font-family: sans-serif;
+    color: var(--background-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+header .search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 8px;
+    border: 1px solid var(--background-color);
+}
+header .search-container select,
+header .search-container input,
+header .search-container button{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    padding: 0px 10px;
+    color: var(--background-color);
+}
+
+header .search-container input{
+    width: 8em;
+    border-left: 1px solid var(--secondary-color);
+}
+header .search-container select{
+    margin-right: 10px;
+    font-size: 1rem;
+}
+header .search-container select option{
+    background-color: var(--text-color);
+}
+header .search-container button{
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+header .navigations{
+    margin-right: -20px;
+}
+header .navigations ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+header .navigations ul li{
+    list-style: none;  
+}
+header .navigations ul li a,
+#signin{
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: var(--background-color);
+}
+header .cta-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header .cta-container button{
+    padding: 11px;
+    background-color: var(--accent-color);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+header .cta-container button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.1s ease;
+}
+header .categories-container{
+    padding: 20px 10px 2px 10px;
+}
+header .categories-container ul{
+    display: flex;
+    gap: 10px;
+}
+header .categories-container ul li{
+    list-style: none; 
+}
+header .categories-container ul li a{
+    font-family: sans-serif;
+    color: var(--background-color);
+    opacity: 0.8;
+}
+header .categories-container ul li a:not(#more)::after{
+    content: '-';
+    padding-left: 5px;
+}
+
+main #heading{
+   padding: 10em 5em 40px 5em;
+}
+main #heading h1{
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    line-height: 64px;
+}
+main #heading p{
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    line-height: 24px;
+    opacity: 0.6;
+}
+main #heading .categories-container{
+    padding-top: 3em;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    color: var(--text-color);
+}
+main #heading .categories-container .categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+main #heading .categories-container .categories button{
+    outline: none;
+    border: none;
+    padding-right: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    border-right: 1px solid var(--text-color);
+    opacity: 0.7;
+}
+main #heading .categories-container .categories button.active{
+    color: var(--primary-color);
+}
+main #heading .categories-container .categories button:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+main #heading .categories-container .categories select{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    opacity: 0.7;
+    width: 6em;
+}
+/* main #heading .categories-container .categories select option{
+    background-color: var(--text-color);
+} */
+main #heading .sort-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+main #heading .sort-container label{
+    opacity: 0.6;
+}
+main #heading .sort-container select{
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    background: transparent;
+    opacity: 0.7;
+    width: 6em;
+    font-weight: 700;
+}
+main #templates-container{
+    padding: 40px 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+main #templates-container .card{
+    width: 20em;
+    height: 15em;
+    border-radius: 8px;
+}
+main #templates-container .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+    margin-top: 5em;
+}
+footer .button{
+    display: flex;
+    border-top: 1px solid var(--text-color);
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+footer .button .logo{
+    width: 10em;
+}
+footer .button .logo img{
+    width: 100%;
+}
+footer .usefull-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;  
+}
+footer .usefull-links a{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: sans-serif;
+    border-right: 1px solid var(--text-color);
+    padding-right: 10px;
+    opacity: 0.8;
+}
+footer .button .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20em;
+}
+footer .button .social-media a{
+    color: var(--text-color);
+    font-size: 1rem;
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+footer #copyrigth{
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--text-color);
+    opacity: 0.5;
+}
